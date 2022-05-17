@@ -1,4 +1,4 @@
-package io.paylike.sample
+package io.paylike.kotlin_currencies
 
 import org.junit.Test
 

@@ -39,26 +39,26 @@ account, settlement and funding currency.
 
 Within the Paylike ecosystem you should use the `CurrencyCode` enum to refer to a currency.
 
-//TODO
 ```kotlin 
-var currencies = PaylikeCurrencies();
-var eur = currencies.byCode(CurrencyCode.EUR);
+// lookup CurrencyCode
+val eurCode: CurrencyCode = PaylikeCurrencies.getCurrencyCode("EUR")
+println(eurCode.name) // "EUR"
 
 // lookup by code
-currencies.byCode(CurrencyCode.AED);
-	// { code: 'AED', currency: 'United Arab Emirates dirham', numeric: '784' }
+val eur: PaylikeCurrency = PaylikeCurrencies.byCode(eurCode)
+// { code: "EUR", currency: "Euro", numeric: 978 }
+println(eur.code) // "EUR"
+println(eur.currency) // "Euro"
+println(eur.numeric) // 978
 
-// lookup CurrencyCode
-currencies.getCurrencyCode('EUR');
-	// CurrencyCode.EUR
+// get list of currencies
+val paylikeCurrenciesList: List<PaylikeCurrency> = PaylikeCurrencyCollection.currencies.values.toList()
 
-// get List<PaylikeCurrency>
-currencies.list();
+// convert between minor and major respecting the exponent
+var major: Number = 100.00
+var minor = PaylikeCurrencies.toMinor(CurrencyCode.DKK, major)
+println(minor) // 10000
 
-// Convert between minor and major respecting the exponent
-currencies.toMinor(CurrencyCode.DKK, 100.00);
-	// 10000
-
-currencies.toMajor(CurrencyCode.DKK, 10000);
-	// 100.00
+major = PaylikeCurrencies.toMajor(CurrencyCode.DKK, minor)
+println(major) // 100
 ```

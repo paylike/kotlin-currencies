@@ -8,8 +8,16 @@ data class PaylikeCurrency(
     val funding: Boolean,
     val deprecated: Boolean
 ) {
-    fun fromJSON(json: Map<String, Any>)
-    {
-        //TODO parse from json
-    }
+
+    // TODO: is it even necessary?
+
+    constructor(json: Map<String, Any>) :
+            this(
+                json.get("code") as String,
+                json.get("currency") as String,
+                json.get("numeric") as Int,
+                json.get("exponent") as Int,
+                json.get("code") != null,
+                json.get("code") != null
+    )
 }

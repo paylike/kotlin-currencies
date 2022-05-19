@@ -1,25 +1,56 @@
 package io.paylike.kotlin_currencies
 
+import android.icu.math.BigDecimal
 import io.paylike.kotlin_currencies.generated.CurrencyCode
 import io.paylike.kotlin_currencies.generated.PaylikeCurrencyCollection
+import java.lang.StrictMath.pow
 
 object PaylikeCurrencies {
-    fun getCurrencyCode(code: String): CurrencyCode // TODO
+    fun getCurrencyCode(code: String): CurrencyCode
     {
-        return CurrencyCode.AED // TODO
+        val currencyCode = PaylikeCurrencyCollection.currencies.entries.find { it -> it.value.code == code }?.key
+        if (currencyCode == null)
+        {
+            throw MissingCurrencyException(code)
+        }
+        return currencyCode
     }
-    fun byCode(code: CurrencyCode): PaylikeCurrency? // TODO
+    fun byNumeric(numeric: Int): PaylikeCurrency
     {
-        return PaylikeCurrencyCollection.currencies[code]// TODO
+        var element: PaylikeCurrency? = PaylikeCurrencyCollection.currencies.entries.find { it -> it.value.numeric == numeric }?.value
+        if (element == null)
+        {
+            throw MissingCurrencyException(numeric)
+        }
+        return element
     }
-    fun list(): List<PaylikeCurrency> // TODO
+    fun byCode(code: CurrencyCode): PaylikeCurrency
     {
-        var temp: List<PaylikeCurrency> = list()
-        PaylikeCurrencyCollection.currencies.forEach { temp.plus(it.value) }
-        return temp  // GIGANTIC TODO
+        val element: PaylikeCurrency? = PaylikeCurrencyCollection.currencies[code]
+        if (element == null)
+        {
+            throw MissingCurrencyException(code) // TODO: is it even necessary?
+        }
+        return element
     }
-    fun byNumeric(code: String): Unit // TODO
+    fun list(): List<PaylikeCurrency>
     {
-        // TODO
+        return PaylikeCurrencyCollection.currencies.values.toList()
     }
+    fun toMinor(code: CurrencyCode, major: Number): Number {
+        return (major.toDouble() * pow(10.0, byCode(code).exponent.toDouble()))
+            .toBigDecimal()
+            .setScale(2, BigDecimal.ROUND_HALF_UP)
+            .toInt()
+    }
+    fun toMajor(code: CurrencyCode, minor: Number): Number
+    {
+        val temp = (minor.toDouble() / pow(10.0, byCode(code).exponent.toDouble()))
+            .toBigDecimal()
+            .setScale(2, BigDecimal.ROUND_HALF_UP)
+        if (isRound(temp))
+            return temp.toInt()
+        return temp.toDouble()
+    }
+    private fun isRound(number: Number) = (number.toDouble() * 100.0) % 100.0 == 0.0 // checks whether its round
 }

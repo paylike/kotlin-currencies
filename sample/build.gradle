@@ -38,5 +38,5 @@ dependencies {
     implementation "androidx.appcompat:appcompat-resources:$appcompat_version"
     implementation 'com.android.support.constraint:constraint-layout:2.0.4'
 
-//    implementation project(':kotlin-currencies')
+    implementation project(':kotlin-currencies')
 }

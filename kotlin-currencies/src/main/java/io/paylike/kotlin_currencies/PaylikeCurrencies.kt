@@ -29,7 +29,7 @@ object PaylikeCurrencies {
         val element: PaylikeCurrency? = PaylikeCurrencyCollection.currencies[code]
         if (element == null)
         {
-            throw MissingCurrencyException(code) // TODO: is it even necessary?
+            throw MissingCurrencyException(code)
         }
         return element
     }

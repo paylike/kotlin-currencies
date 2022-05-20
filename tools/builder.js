@@ -91,8 +91,8 @@ for (let i = 0; i < currencies.length; i++) {
     //
 }
 // closing the class file strings
-currencyCodeString += "}";
-paylikeCurrencyString += "\t)\n}";
+currencyCodeString += "}\n";
+paylikeCurrencyString += "\t)\n}\n";
 
 // Writing the files
 var file = path.join(__dirname, generationPath, outputCodes);

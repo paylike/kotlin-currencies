@@ -6,7 +6,6 @@ import io.paylike.kotlin_currencies.PaylikeCurrencies
 import io.paylike.kotlin_currencies.PaylikeCurrency
 import io.paylike.kotlin_currencies.generated.CurrencyCode
 import io.paylike.kotlin_currencies.generated.PaylikeCurrencyCollection
-import java.io.Console
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

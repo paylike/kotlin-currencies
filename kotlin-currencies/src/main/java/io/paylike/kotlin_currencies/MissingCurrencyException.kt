@@ -3,7 +3,7 @@ package io.paylike.kotlin_currencies
 import io.paylike.kotlin_currencies.generated.CurrencyCode
 
 class MissingCurrencyException() : Exception() {
-    constructor(code: CurrencyCode) : this() { // TODO: is it even necessary?
+    constructor(code: CurrencyCode) : this() {
         this.code = code
     }
     constructor(numeric: Int) : this() {

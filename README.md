@@ -1,9 +1,10 @@
 # Currencies
+
+<a href="https://jitpack.io/#paylike/kotlin-currencies" target="_blank">
+    <img src="https://jitpack.io/v/paylike/kotlin-currencies.svg" />
+</a>
+
 This library is a clone of the [JS version](https://github.com/paylike/currencies)
-
-[![](https://jitpack.io/v/paylike/kotlin-currencies.svg)]
-(https://jitpack.io/#paylike/kotlin-currencies)
-
 
 List of currencies supported by Paylike for transactions and accounts.
 

@@ -1,6 +1,10 @@
 # Currencies
 This library is a clone of the [JS version](https://github.com/paylike/currencies)
 
+[![](https://jitpack.io/v/paylike/kotlin-currencies.svg)]
+(https://jitpack.io/#paylike/kotlin-currencies)
+
+
 List of currencies supported by Paylike for transactions and accounts.
 
 Read more:
@@ -36,6 +40,20 @@ account, settlement and funding currency.
 - HRK (Croatian kuna)
 
 ## Usage
+
+To include the lib, you may add the following groovy code to your gradle build files
+
+```groovy
+repositories {
+    //...
+    maven { url "https://jitpack.io" }
+}
+dependencies {
+    //...
+    implementation 'com.github.paylike:kotlin-currencies:v1.0.2'
+}
+```
+
 
 Within the Paylike ecosystem you should use the `CurrencyCode` enum to refer to a currency.
 

@@ -1,11 +1,11 @@
-package io.paylike.sample
+package com.github.paylike.sample
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import io.paylike.kotlin_currencies.PaylikeCurrencies
-import io.paylike.kotlin_currencies.PaylikeCurrency
-import io.paylike.kotlin_currencies.generated.CurrencyCode
-import io.paylike.kotlin_currencies.generated.PaylikeCurrencyCollection
+import com.github.paylike.kotlin_currencies.PaylikeCurrencies
+import com.github.paylike.kotlin_currencies.PaylikeCurrency
+import com.github.paylike.kotlin_currencies.generated.CurrencyCode
+import com.github.paylike.kotlin_currencies.generated.PaylikeCurrencyCollection
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

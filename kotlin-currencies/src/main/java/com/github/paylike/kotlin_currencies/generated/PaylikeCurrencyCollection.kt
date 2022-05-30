@@ -4,9 +4,9 @@
 // CurrencyGenerator
 // **************************************************************************
 
-package io.paylike.kotlin_currencies.generated
+package com.github.paylike.kotlin_currencies.generated
 
-import io.paylike.kotlin_currencies.PaylikeCurrency
+import com.github.paylike.kotlin_currencies.PaylikeCurrency
 
 object PaylikeCurrencyCollection {
 	val currencies: Map<CurrencyCode, PaylikeCurrency> = mapOf(

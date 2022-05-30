@@ -1,8 +1,7 @@
-package io.paylike.kotlin_currencies
+package com.github.paylike.kotlin_currencies
 
-import io.paylike.kotlin_currencies.PaylikeCurrencies
-import io.paylike.kotlin_currencies.generated.CurrencyCode
-import io.paylike.kotlin_currencies.generated.PaylikeCurrencyCollection
+import com.github.paylike.kotlin_currencies.generated.CurrencyCode
+import com.github.paylike.kotlin_currencies.generated.PaylikeCurrencyCollection
 import org.junit.Test
 import org.junit.Assert.*
 

@@ -1,6 +1,6 @@
-package io.paylike.kotlin_currencies
+package com.github.paylike.kotlin_currencies
 
-import io.paylike.kotlin_currencies.generated.CurrencyCode
+import com.github.paylike.kotlin_currencies.generated.CurrencyCode
 
 class MissingCurrencyException() : Exception() {
     constructor(code: CurrencyCode) : this() {

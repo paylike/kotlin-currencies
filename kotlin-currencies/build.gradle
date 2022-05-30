@@ -42,8 +42,8 @@ afterEvaluate {
                 from components.release
 
                 groupId = 'com.github.paylike'
-                artifactId = 'kotlin-currencies'
-                version = '1.0.3'
+                artifactId = 'kotlin_currencies'
+                version = 'master-SNAPSHOT'
             }
         }
     }

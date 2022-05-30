@@ -1,10 +1,7 @@
 package com.github.paylike.kotlin_currencies
 
-import MissingCurrencyException
-import PaylikeCurrencies
-import PaylikeCurrency
-import generated.CurrencyCode
-import generated.PaylikeCurrencyCollection
+import com.github.paylike.kotlin_currencies.generated.CurrencyCode
+import com.github.paylike.kotlin_currencies.generated.PaylikeCurrencyCollection
 import org.junit.Test
 import org.junit.Assert.*
 

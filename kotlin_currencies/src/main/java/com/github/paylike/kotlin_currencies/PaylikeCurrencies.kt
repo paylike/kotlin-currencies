@@ -1,6 +1,8 @@
+package com.github.paylike.kotlin_currencies
+
 import android.icu.math.BigDecimal
-import generated.CurrencyCode
-import generated.PaylikeCurrencyCollection
+import com.github.paylike.kotlin_currencies.generated.CurrencyCode
+import com.github.paylike.kotlin_currencies.generated.PaylikeCurrencyCollection
 import java.lang.StrictMath.pow
 
 object PaylikeCurrencies {

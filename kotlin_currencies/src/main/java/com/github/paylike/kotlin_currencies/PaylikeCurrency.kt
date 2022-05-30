@@ -1,3 +1,5 @@
+package com.github.paylike.kotlin_currencies
+
 data class PaylikeCurrency(
     val code: String,
     val currency: String,

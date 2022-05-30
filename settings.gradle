@@ -13,6 +13,6 @@ dependencyResolutionManagement {
         maven { url "https://jitpack.io" }
     }
 }
-rootProject.name = 'kotlin-currencies'
-include ':kotlin-currencies'
+rootProject.name = 'kotlin_currencies'
+include ':kotlin_currencies'
 include ':sample'

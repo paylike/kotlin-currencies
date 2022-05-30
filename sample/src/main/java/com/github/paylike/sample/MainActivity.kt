@@ -2,10 +2,10 @@ package com.github.paylike.sample
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.github.paylike.kotlin_currencies.PaylikeCurrencies
-import com.github.paylike.kotlin_currencies.PaylikeCurrency
-import com.github.paylike.kotlin_currencies.generated.CurrencyCode
-import com.github.paylike.kotlin_currencies.generated.PaylikeCurrencyCollection
+import PaylikeCurrencies
+import PaylikeCurrency
+import generated.CurrencyCode
+import generated.PaylikeCurrencyCollection
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

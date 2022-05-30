@@ -4,7 +4,7 @@
 // CurrencyGenerator
 // **************************************************************************
 
-package com.github.paylike.kotlin_currencies.generated
+package generated
 
 enum class CurrencyCode {
 	AED,

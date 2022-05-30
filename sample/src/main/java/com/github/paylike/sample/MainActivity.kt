@@ -1,9 +1,9 @@
 package com.github.paylike.sample
 
-import com.github.paylike.kotlin_currencies.PaylikeCurrencies
-import com.github.paylike.kotlin_currencies.PaylikeCurrency
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.github.paylike.kotlin_currencies.PaylikeCurrencies
+import com.github.paylike.kotlin_currencies.PaylikeCurrency
 import com.github.paylike.kotlin_currencies.generated.CurrencyCode
 import com.github.paylike.kotlin_currencies.generated.PaylikeCurrencyCollection
 

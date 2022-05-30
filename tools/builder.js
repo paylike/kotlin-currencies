@@ -1,10 +1,9 @@
-
-const generationPath = './../kotlin-currencies/src/main/java/io/paylike/kotlin_currencies/generated/';
+const generationPath = './../kotlin_currencies/src/main/java/com/github/paylike/kotlin_currencies/generated/';
 const inputJson = 'currencies.json';
 const outputCodes = 'CurrencyCode.kt';
 const outputCurrencies = 'PaylikeCurrencyCollection.kt';
 
-const initialGeneratedText = "// GENERATED CODE - DO NOT MODIFY BY HAND\n\n// **************************************************************************\n// CurrencyGenerator\n// **************************************************************************\n\npackage io.paylike.kotlin_currencies.generated\n\n";
+const initialGeneratedText = "// GENERATED CODE - DO NOT MODIFY BY HAND\n\n// **************************************************************************\n// CurrencyGenerator\n// **************************************************************************\n\npackage com.github.paylike.kotlin_currencies.generated\n\n";
 const currencyCodeClassName = "CurrencyCode";
 const paylikeCurrencyCollectionClassName = "PaylikeCurrencyCollection";
 const paylikeCurrencyName = "PaylikeCurrency";
@@ -24,7 +23,7 @@ var currencyCodeString =
 // initial string of currency collection class
 var paylikeCurrencyString = 
     initialGeneratedText + 
-    "import io.paylike.kotlin_currencies." +
+    "import com.github.paylike.kotlin_currencies." +
     paylikeCurrencyName +
     "\n\nobject " +
     paylikeCurrencyCollectionClassName + 

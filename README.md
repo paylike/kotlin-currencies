@@ -51,7 +51,7 @@ repositories {
 }
 dependencies {
     //...
-    implementation 'com.github.paylike:kotlin-currencies:v1.0.2'
+    implementation 'com.github.paylike:kotlin-currencies:v1.0.9'
 }
 ```
 

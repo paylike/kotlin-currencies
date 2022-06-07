@@ -6,9 +6,6 @@ import com.github.paylike.kotlin_currencies.PaylikeCurrencies
 import com.github.paylike.kotlin_currencies.PaylikeCurrency
 import com.github.paylike.kotlin_currencies.generated.CurrencyCode
 import com.github.paylike.kotlin_currencies.generated.PaylikeCurrencyCollection
-import kotlinx.serialization.KSerializer
-import kotlinx.serialization.encodeToString
-import kotlinx.serialization.json.Json
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
